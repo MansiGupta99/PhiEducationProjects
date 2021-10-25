@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../public/css/adminLogin.css">
+	
+	<!-- <script language = "javascript" >
+	
+
+	</script> -->
+</head>
+<body>
+	<div class="parent-div">
+		<h2 class="admin">ADMIN PANEL</h2>
+		<div class="child-div">
+			<h2 class="login">LOGIN</h2>
+			<form name = "f1"  action="/api/login" method = "post">
+				<div class="container">
+				   	<label class = "uname" for="uname"><b>Username</b></label><br>
+				  	<input class = "unametext" type="text" placeholder="Enter Username" name="uname" id = "name" value = "" required><br>
+			  
+					<label class = "uname" for="psw"><b>Password</b></label><br>
+					<input  class = "unametext" type="password" placeholder="Enter Password" name="psw" id = "pswd" value = ""  required><br>
+					<a class = "linked" style="color: black;"  href="/views/forgetPassword.html" target="_blank">Forgot Password?</a>			
+					 <div class="flex-parent jc-center ">										
+						<button type="submit" id = "login" name = "submit"  class="margin-right" >LOGIN</button>				
+					</div>	  
+				</div>		  
+			</form>
+		</div>
+	</div>
+</body>
+</html>

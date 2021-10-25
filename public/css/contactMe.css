@@ -1,0 +1,273 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap';
+
+/* standard apply to whole page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+/* Assign color to the body that is grey */
+body {
+    background-color: lightgray;
+}
+
+ /* designing margin to the whole page */
+.rcorners2 {
+    border-radius: 25px;
+    border: 2px;  
+    margin-left: 80px; 
+    margin-right: 80px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0;    
+}
+
+.max-width{
+    max-width: 1300px;    
+    /* min-height: 100%; */
+    padding: 0 80px;
+    margin: auto;    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Assigning font to the page */
+.about,.contact,.flex-parent {
+    font-family: 'Poppins',sans-serif;
+}
+
+/* About section Styling start here */
+
+/* this assign top border as well as background color */
+.about{
+    background-color:rgb(154 205  50);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px; 
+}
+
+/* this makes the display as flex and content is in black color */
+.about .about-content
+{
+    display:flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-between;        
+    min-height: 45vh;
+    color: black;  
+    position: relative;  
+}
+
+/* dividing div in left and right */
+.about .about-content .left{
+    width: 35%;
+}
+.about .about-content .right{
+    width: 65%;
+}
+
+/* Image styling */
+.about .about-content .left img{
+    width:200px;
+    height:250px;
+    object-fit: cover;
+    border-radius: 50px;
+    border-width: 55px;
+}
+
+/* text Styling Some Name */
+.about .about-content .right .text-1{
+    font-size: 25px;
+    font-weight: 600;
+    /* margin-bottom: 10px; */
+}
+
+/* text Styling Web Developer*/
+.about .about-content .right .text-2{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* text Styling paragraph*/
+.about .about-content .right p{
+    text-align: justify;
+}
+
+/* ContactMetitle */
+
+/* assigning white background to the contact section */
+.contact{
+    background-color: white;
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius: 25px;
+}
+
+/* styling Contact me */
+.contact .title{  
+    position:relative;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 600;    
+    padding-top: 30px;
+    padding-bottom: 20px; 
+    padding-left: -1px;
+}
+
+.contact .contact-content{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+/* styling the paragraph */
+.contact .contact-content p{
+    text-align: justify;
+}
+
+/* styling the contact form */
+.contact .contact-content .contact-form{
+    justify-content: center;  
+    padding-top: 50px;
+}
+
+.contact .contact-content .contact-form .input-box{  
+    font-size: 14px;
+    font-weight: 600;    
+}
+
+#fname{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 0; 
+    border-radius: 6px;      
+    border: 2px solid lightgray;
+    padding-left: 20px;    
+    
+}
+#email{
+    height: 45px;  
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 6px;      
+    border: 2px solid lightgray;
+    padding-left: 20px;
+}
+#msg{    
+    height: 45px;  
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 6px;      
+    border: 2px solid lightgray;
+    padding-left: 20px;
+}
+#mobileNumber{   
+    height: 45px;   
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 6px;      
+    border: 2px solid lightgray;
+    padding-left: 20px;
+}
+.contact .contact-content .contact-form .button{
+    display: flex-wrap;
+}
+
+.flex-parent {
+    display: flex;
+    padding-bottom: 500px;
+}
+  
+.jc-center {
+    justify-content: right;
+}
+  
+button.margin-left{
+    width: 100px;
+    height:50px;
+    margin-right: 20px;   
+    font-size: 14px;
+    font-weight: 200;
+    background-color: grey; 
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: white;
+    transition: all 0.3s ease;
+}
+button.margin-left:hover{
+    background: none;
+    color: black;
+}
+button.margin-right {
+    margin-right: 0px;
+    width: 100px;
+    height:50px; 
+    font-size: 14px;
+    font-weight: 200;   
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-radius: 5px;  
+}
+
+button.margin-right:hover{
+    background: none;
+    color: black;
+}
+
+/*Responsive Media quesry Start*/
+@media(max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }   
+}
+
+
+/* image resize  */
+@media(max-width: 1104px){
+    .about .about-content .left img{
+        padding-top: 10px;
+        width:200px;
+        height:250px;       
+    }
+}
+
+/* Space between text and image */
+@media(max-width: 991px){
+    .max-width{
+        padding : 0 50px;
+    }  
+}
+
+@media(max-width: 947px){  
+    .max-width{
+        max-width: 800px;
+        max-height: auto;        
+    }
+    .about .about-content .column{
+        width:100%;  
+        min-height: 40vh;      
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 30px ;
+    }
+    .about .about-content .right {
+        flex:100%;
+    }
+   .contact .contact-content{        
+        width:100%;
+        margin-left: 0px;
+   }
+   .contact .contact-content p{
+        margin-left: 9px;
+        margin-right: 9px;        
+   }
+   .contact .contact-content .contact-form .input-box .user-input{
+        
+        width: 100%;
+   }
+}

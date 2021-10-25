@@ -1,0 +1,96 @@
+body{
+    background-color: lightgray;
+}
+.parent-div{
+    width: 800px;
+    height: 800px;
+    background-color: #C4E538;
+    position: relative;
+    left:300px;
+    top:50px;
+    margin-bottom: 100px;	
+    border-radius: 25px;
+}
+.child-div{
+    width:500px;
+    height:500px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top:55%; 
+    transform: translate(-50%,-50%);
+    border-radius: 25px;
+}
+.admin{
+    margin-left:40%;
+    color: white;
+    padding-top: 100px;
+}
+.login{
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 60px;
+}
+.container{
+    margin-top: 20px;
+}
+.uname{
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 26px;
+}
+.unametext{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    margin-left: 30px;			
+    resize: vertical;
+}
+
+.flex-parent {
+    display: flex;		
+}
+
+.jc-center  {
+    justify-content: right;
+}
+
+button.margin-right {
+    margin-right: 70px;
+    width: 100px;
+    height:50px; 
+    font-size: 14px;
+    font-weight: 200;   
+    background-color: black;
+    color: white;
+    border-color: black;
+    border-radius: 5px;  
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(-30px);
+}
+button.margin-right:hover{
+    background: none; 
+    color: black;
+    border-color: black;
+}
+input[type=password]{
+    margin-bottom: 60px;
+}
+ .linked{
+    margin-left: 30px;
+    padding-top: 10px;
+    color:black;
+    text-decoration: none;
+} 
+
+@media(max-width: 947px){
+    .parent-div{
+        padding : 0 50px;
+    }
+}

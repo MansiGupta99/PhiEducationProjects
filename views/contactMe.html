@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Mansi Gupta</title>
+    <link rel="stylesheet" href="../public/css/contactMe.css">
+       
+    
+</head> 
+
+<body>
+    <section class="rcorners2 ">
+        <section class="about">
+            <div class="max-width">           
+                <div class="about-content">
+                    <div class="column left">
+                        <img src = "../public/img/img.png" alt="">
+                    </div>
+                    <div class="column right">
+                        <div class="text-1">Some Name</div>
+                        <div class="text-2">Web Developer</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut magnam incidunt est totam ducimus necessitatibus fuga, quibusdam aliquid ea molestiae id nemo nam expedita soluta sed eum veniam repudiandae.</p>
+                </div> 
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="max-width"> 
+                <div class="contact-content">
+                    <h2 class="title">CONTACT ME</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam a eligendi aliquid libero necessitatibus reprehenderit atque in numquam inventore quam repellat itaque iusto eius minima, ea nulla deleniti facilis ipsam.</p>
+                    <div class="contact-form">
+                        <!-- <form name = "f1" action="" onsubmit="login();"></form> -->
+                         <form name = "f1" action="/api/contactMe" method = "post" > 
+                            <div class="input-box">
+                                <label for="fname">FULL NAME</label>
+                                <div class="user-input">
+                                    <input type="text" id="fname" name="fname" autocomplete="off" placeholder = "Example Name" name = "fName" ><br><br>
+                                </div>                
+                            </div>
+
+                            <div class="input-box">
+                                <label for="mobileNumber">MOBILE NUMBER</label>
+                                <div class="user-input">
+                                    <input type="tel" id="mobileNumber" name="mobileNumber" autocomplete="off" placeholder = "7412587412" name = "mobNum"  ><br><br>
+                                </div>                
+                            </div>
+
+                            <div class="input-box">
+                                <label for="email">EMAIL</label>
+                                <div class="user-input">
+                                    <input type="email" id="email" name="email" autocomplete="off" placeholder = "abc@gmail.com" name = "email" ><br><br>
+                                </div>                
+                            </div>
+
+                            <div class="input-box">
+                                <label for="message">MESSAGE</label>
+                                <div class="user-input">
+                                    <input type="text" id="msg" name="msg" autocomplete="off" placeholder = "Some message" name = "msg" ><br><br>
+                                </div>                
+                            </div>
+                            <!-- <div class="buttons">
+                                <div class="action_btn">                    
+                                <button name="submit" class="action_btn cancel" type="submit" value="Save" onclick="myFunction()">Back</button>
+                                <button name="submit" class="action_btn submit" type="submit" value="Cancel" onclick="myFunction2()">Save</button>                    
+                                <p id="saved"></p>                    
+                                </div>                    
+                            </div> -->
+                            
+                            <div class="flex-parent jc-center ">
+                                <button type="submit" class="margin-left" id="backBtn"  onclick="backPage()">BACK</button>
+                                <button type="submit" class="margin-right" id="submitBtn">SUBMIT</button>
+                            </div>                       
+
+                            <!-- <div class="flex-parent jc-center ">
+                                <button type="submit" class="margin-left" >BACK</button>
+                                <button type="submit" class="margin-right" value="submit">SUBMIT</button>
+                            </div>    -->
+                         </form> 
+                    </div>                   
+                </div>                 
+            </div>
+        </section>
+    </section>   
+      <!-- <script>            
+            var back = document.getElementById("backBtn");
+            var submit = document.getElementById("submitBtn");
+            back.addEventListener("click", backPage);
+            submit.addEventListener("click", InsertData);
+
+            function InsertInformation (Name, MobNumber, emailId, msg) {
+                return new Promise(function(resolve, reject){
+                    var sql = "INSERT INTO message (Name,MobNumber,emailId,msg) VALUES (?,?,?,?)";
+                    dbConn.query(sql, [Name, MobNumber, emailId, msg],
+                    function(err, rows){                                                
+                        if(rows === undefined){
+                            reject(new Error("Error rows is undefined"));
+                        }else{
+                            resolve(rows);
+                        }
+                    }
+                )}
+            )}
+
+            function backPage() {
+                window.open('Resume.html');
+            }
+
+            function InsertData() {
+                var name = document.getElementById("fname").value;
+                var mobNum = document.getElementById("mobileNumber").value;
+                var email = document.getElementById("email").value;
+                var msg = document.getElementById("msg").value;
+                var flag = true;
+
+                console.log(name);
+                console.log(mobNum);
+                console.log(email);
+                console.log(msg);            
+
+                if(name=="")
+                {
+                    alert ("Enter the Name")
+                    flag = false
+                }
+
+                if(mobNum=="")
+                {  
+                    alert("Enter the correct Mobile Number in the format XXX-XXX-XXXX");
+                    flag = false;
+                }
+
+                if(email=="")
+                {
+                    alert ("Enter the Email Id")
+                    flag = false
+                }
+                    
+                if(msg=="")
+                {
+                    alert ("Enter the Message")
+                    flag = false
+                }  
+                
+                InsertInformation(name, mobNum, email, msg).then(function(results){
+                    console.log("1 record Inserted");
+                })
+                .catch(function(err){
+                    console.log("Promise rejection error: "+err);
+                })
+            }  
+    </script>   -->
+    <!-- <script src="public/js/Contact.js"></script>  -->
+    <script>
+         function backPage() {
+                window.open('homePage.html');
+            }
+    </script>
+</body>
+</html>

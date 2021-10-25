@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MessagesInbox</title>
+    <link rel="stylesheet" href="../public/css/myMessages.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- require for icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <script>      
+    console.log("Script Open");  
+        $(document).ready(function ($) {
+            console.log("Inside Jquery");
+            $('#thetable').find('tr').click( function(){
+                var index = ($(this).index())
+                console.log(index)
+                var test = <%- JSON.stringify(data) %>;
+                //let test = JSON.stringify(data);
+                console.log("test");
+                console.log("test");
+                console.log(test);
+                var email = test[index].email;
+                var mobileNumber = test[index].mobileNumber;
+                var message = test[index].msg;
+                var fullname = test[index].fname;
+                $('#fullname').html(fullname);
+                $('#emailID').html(email);
+                $('#mobileNumber').html(mobileNumber);
+                $('#message').html(message);            
+            });            
+        });
+    </script>
+
+</head>
+<body>
+    <section class="rcorners2 ">
+        <section class="about">
+            <div class="max-width">           
+                <div class="about-content">
+                    <div class="column left">
+                        <img src = "../public/img/img.png" alt="">
+                    </div>
+                    <div class="column right">
+                        <div class="text-1">Welcome</div>
+                        <div class="text-2">Some Name</div>                                     
+                        <table class = "logout" align ="right" >                                                
+                            <tr>
+                                <th><i class="fa fa-power-off" ></i></th>                                
+                                <td> <a href="/views/adminLogin.html"  id = "logout">Logout</a></td> 
+                            </tr>
+                        </table> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class = "message">
+            <div class="max-width">           
+                <div class="message-content">
+                    <h1>MESSAGES(<%= count %>)</h1>                
+                    <h2>2 New Messages</h2>
+                </div>
+                <div class="msg-box">
+                    <table id = "thetable">
+                        <% data.forEach((item)=> { %>
+                            <tr>
+                                <td>
+                                    <b><%= item.fname %></b><br>
+                                    <!-- <%= item.msg %> -->
+                                </td>
+                            </tr>
+                            <% }) %> 
+                    </table>
+                </div>
+                <div class="msg">
+                    <div class="msg-upper">
+                        <h3>
+                            <span id="fullname"></span>
+                        </h3>
+                        <p>12th Mar,2020    07:45pm</p>
+                        <p id="mob"><strong>Mob.: </strong><span id="mobileNumber"></span></p>
+                        <p id="email"><strong> Email:</strong><span id="emailID"></span></p>
+                    </div>
+                    <hr>
+                    <div class="msg-main">
+                        <p>
+                            <span id="message"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+</html>
